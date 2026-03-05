@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Garfield Characters</title>
+</head>
+
+<body>
+
+<h3>Select a Character</h3>
+
+<select id="characterSelect" onchange="changeImage()">
+    <option value="">--Select Character--</option>
+    <option value="garfield">Garfield</option>
+    <option value="odie">Odie</option>
+    <option value="nermal">Nermal</option>
+    <option value="pooky">Pooky</option>
+    <option value="jon">Jon</option>
+</select>
+
+<br><br>
+
+<img id="characterImage" src="" width="200">
+
+<script>
+
+function changeImage() {
+
+    var character = document.getElementById("characterSelect").value;
+
+    if(character != ""){
+        document.getElementById("characterImage").src = "images/" + character + ".jpg";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
